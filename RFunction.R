@@ -1,10 +1,12 @@
 library('move')
 library('lubridate')
+library(ctmm)
 
-## The parameter "data" is reserved for the data object passed on from the previous app
+# input: telemetry - output: movestack
 
-## to display messages to the user in the log file of the App in MoveApps one can use the function from the logger.R file: logger.fatal(), logger.error(), logger.warn(), logger.info(), logger.debug(), logger.trace() ##
-
-rFunction = function(year, data) {
-  data[year(data@timestamps) == year]
+rFunction = function(data) {
+  timestamps(data) <- with_tz(timestamps(data), tzone = "UTC") # stork data set was giving an error. that why I included this for now
+  mv <- move(data)
+  result <- moveStack(mv, forceTz="UTC")
+  return(result)
 }

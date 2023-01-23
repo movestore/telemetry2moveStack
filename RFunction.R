@@ -1,12 +1,13 @@
 library('move')
-library('lubridate')
-library(ctmm)
+library("ctmm")
 
-# input: telemetry - output: movestack
+# input: telemetry.list - output: movestack
 
-rFunction = function(data) {
-  timestamps(data) <- with_tz(timestamps(data), tzone = "UTC") # stork data set was giving an error. that why I included this for now
-  mv <- move(data)
-  result <- moveStack(mv, forceTz="UTC")
-  return(result)
+rFunction <- function(data){
+  # incase we would need to do some checking for the input
+  # if(class(data)== "telemetry"){
+  #   data <- list(data)
+  # } else if((unique(unlist(lapply(data, class))) == "telemetry")){data <- data}
+  move(data) # when input is a list of telemetry obj, output is a movestack. if input is a telemetry obj, output is move
 }
+

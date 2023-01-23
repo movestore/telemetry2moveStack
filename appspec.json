@@ -8,9 +8,6 @@
       },
       {
         "name": "ctmm"
-      },
-      {
-        "name": "lubridate"
       }
     ]
   },
@@ -19,9 +16,10 @@
   },
   "language": "eng",
   "keywords": [
+    "mapper",
     "coertion",
     "MoveStack",
-    "telemetry"
+    "telemetry.list"
   ],
   "people": [
     {

@@ -1,4 +1,4 @@
-# Coercion: Telemtry to MoveStack
+# Coercion: Telemtry.list to MoveStack
 
 MoveApps
 

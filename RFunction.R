@@ -6,7 +6,7 @@ library("ctmm")
 rFunction <- function(data, projection=c("current", "geographic")){
   result <- move(data) 
   if(projection=="geographic"){
-    result <-  move::spTransform(result, CRSobj=CRS("+proj=longlat +ellps=WGS84"))
+    result <-  spTransform(result, CRSobj=CRS("+proj=longlat +ellps=WGS84"))
   }
   return(result)
 }

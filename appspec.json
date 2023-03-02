@@ -1,10 +1,25 @@
 {
   "settings": [
+    {
+  "id": "projection",
+  "name": "Projection",
+  "description": "Select an option.",
+  "type": "RADIOBUTTONS",
+  "defaultValue": "current",
+  "options": [{
+      "value": "current",
+      "displayText": "Use current projection"
+    },
+    {
+      "value": "geographic",
+      "displayText": "Project to geographic coordinate system (longitude/latitude in decimal degrees)"
+    }]
+}
   ],
   "dependencies": {
     "R": [
       {
-        "name": "move",
+        "name": "move"
       },
       {
         "name": "ctmm"

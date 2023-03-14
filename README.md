@@ -8,7 +8,7 @@ Github repository: https://github.com/movestore/telemetry2moveStack
 Transformation of data in class Telemetry.list to class MoveStack 
 
 ## Documentation
-Most information contained in the telemetry objects will be lost during this transformation, only coordinates, time and individual ID will be maintained. The data can be translated keeping the current projection, or projecting it into a geographic coordinate system. For other projections the App "Change Projection" can be used subsequently.
+Be aware that although most attributes are kept, some attributes associated to the locations can be lost in this transformation. The data can be translated keeping the current projection, or projecting it into a geographic coordinate system. For other projections the App "Change Projection" can be used subsequently.
 
 ### Input data
 Telemetry.list
